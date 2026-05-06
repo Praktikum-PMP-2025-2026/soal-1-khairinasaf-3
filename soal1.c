@@ -63,19 +63,21 @@ int main(){
         enqueue(&q, id, durasi);
     }
 
-    printf("ORDER ");
+    printf("ORDER");
     for(int i = 0; i < N; i++){
         Pasien p = dequeue(&q);
-        printf("%s ", p.id);
+        printf(" %s", p.id);
 
         totalDurasi = totalDurasi + durasiSekarang;
 
         durasiSekarang = durasiSekarang + p.durasi;
     }
 
+    printf("\n");
+
     int total = totalDurasi;
 
-    printf("\nWAIT ");
+    printf("WAIT ");
     printf("%d", total);
 
     return 0;
